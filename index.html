@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paula Hernandez - Resume</title>
+    <title>Paula Hernandez - Head of PR & Strategic Partnerships</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,18 +23,18 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 12px;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+            border-radius: 16px;
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: white;
-            padding: 50px 60px;
+            padding: 60px 60px;
             position: relative;
             overflow: hidden;
         }
@@ -42,34 +42,63 @@
         .header::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255,255,255,0.1);
+            top: -30%;
+            right: -15%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(102,126,234,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(118,75,162,0.2) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         h1 {
-            font-size: 3em;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             position: relative;
             z-index: 1;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .title {
-            font-size: 1.3em;
+            font-size: 1.4em;
             font-weight: 300;
             opacity: 0.95;
             position: relative;
             z-index: 1;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            color: #a78bfa;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 1.05em;
+            opacity: 0.85;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            color: #c4b5fd;
+            margin-top: 15px;
         }
 
         .contact-info {
-            margin-top: 25px;
+            margin-top: 30px;
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
@@ -82,64 +111,117 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            opacity: 0.9;
         }
 
         .content {
-            padding: 50px 60px;
+            padding: 55px 60px;
         }
 
         .section {
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .section-title {
-            font-size: 1.6em;
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
             font-weight: 700;
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            color: #1a1a2e;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #667eea 0%, #764ba2 100%) 1;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
         }
 
         .summary {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #4a5568;
+            font-size: 1.1em;
+            line-height: 1.9;
+            color: #374151;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            position: relative;
         }
 
-        .experience-item, .education-item {
-            margin-bottom: 35px;
+        .summary::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            color: #667eea;
+            opacity: 0.2;
+        }
+
+        .experience-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+
+        .experience-item:hover {
+            box-shadow: 0 8px 25px rgba(102,126,234,0.15);
+            transform: translateY(-3px);
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
 
         .job-title {
-            font-size: 1.3em;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
             font-weight: 700;
-            color: #2d3748;
+            color: #1a1a2e;
+            margin-bottom: 5px;
         }
 
         .company {
-            font-size: 1.1em;
+            font-size: 1.15em;
             font-weight: 600;
-            color: #667eea;
-            margin-bottom: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .location {
+            font-size: 0.9em;
+            color: #6b7280;
+            font-style: italic;
         }
 
         .date {
             font-size: 0.95em;
-            color: #718096;
-            font-weight: 500;
+            color: #6b7280;
+            font-weight: 600;
             white-space: nowrap;
+            background: #f3f4f6;
+            padding: 6px 14px;
+            border-radius: 20px;
         }
 
         .achievements {
@@ -149,60 +231,128 @@
 
         .achievements li {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            line-height: 1.7;
-            color: #4a5568;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            line-height: 1.8;
+            color: #374151;
         }
 
         .achievements li::before {
-            content: '▸';
+            content: '◆';
             position: absolute;
             left: 0;
             color: #667eea;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1em;
+        }
+
+        .achievements strong {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+
+        .skills-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #764ba2;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .skill-category {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            background: white;
             padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-top: 3px solid;
+            transition: all 0.3s;
+        }
+
+        .skill-category:nth-child(1) { border-top-color: #667eea; }
+        .skill-category:nth-child(2) { border-top-color: #764ba2; }
+        .skill-category:nth-child(3) { border-top-color: #8b5cf6; }
+        .skill-category:nth-child(4) { border-top-color: #ec4899; }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102,126,234,0.15);
         }
 
         .skill-category-title {
             font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 10px;
-            font-size: 1.05em;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            font-family: 'Playfair Display', serif;
         }
 
         .skill-list {
             font-size: 0.95em;
-            color: #4a5568;
-            line-height: 1.8;
+            color: #4b5563;
+            line-height: 1.9;
         }
 
-        .languages {
+        .education-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .degree {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .university {
+            font-size: 1.05em;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .certifications {
             display: flex;
-            gap: 30px;
+            gap: 15px;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
-        .language-item {
+        .cert-badge {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 12px 25px;
             border-radius: 25px;
             font-weight: 600;
             font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+        }
+
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .language-item {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1em;
+            box-shadow: 0 5px 20px rgba(26,26,46,0.3);
         }
 
         .print-button {
@@ -211,20 +361,20 @@
             right: 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px 30px;
+            padding: 16px 32px;
             border: none;
             border-radius: 30px;
             font-weight: 600;
             font-size: 1em;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+            box-shadow: 0 10px 35px rgba(102,126,234,0.5);
             transition: all 0.3s;
             z-index: 1000;
         }
 
         .print-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102,126,234,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(102,126,234,0.6);
         }
 
         @media print {
@@ -239,20 +389,20 @@
             .print-button {
                 display: none;
             }
-            .header {
+            .header, .content {
                 padding: 30px 40px;
             }
-            .content {
-                padding: 30px 40px;
+            .experience-item {
+                page-break-inside: avoid;
             }
         }
 
         @media (max-width: 768px) {
             .header, .content {
-                padding: 30px 25px;
+                padding: 35px 25px;
             }
             h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             .job-header {
                 flex-direction: column;
@@ -270,7 +420,8 @@
     <div class="container">
         <div class="header">
             <h1>Paula Hernandez</h1>
-            <p class="title">Customer Care Manager | Operations & Marketing Leader</p>
+            <p class="title">Head of PR & Strategic Partnerships</p>
+            <p class="tagline">Building brands through strategic storytelling, partnerships & community impact</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧</span> <span>paula.hernandez@email.com</span>
@@ -279,7 +430,7 @@
                     <span>📱</span> <span>(555) 123-4567</span>
                 </div>
                 <div class="contact-item">
-                    <span>📍</span> <span>Miami, FL</span>
+                    <span>📍</span> <span>West Palm Beach, FL</span>
                 </div>
                 <div class="contact-item">
                     <span>💼</span> <span>linkedin.com/in/paulahernandez</span>
@@ -290,91 +441,170 @@
         <div class="content">
             <!-- Professional Summary -->
             <section class="section">
-                <h2 class="section-title">Professional Summary</h2>
+                <h2 class="section-title">Professional Profile</h2>
                 <p class="summary">
-                    Results-driven bilingual professional with proven expertise in <strong>Customer Operations, Marketing, and Team Leadership</strong>. Track record of leading high-performing teams, optimizing customer experience strategies, and driving operational excellence in fast-paced startup environments. Known for bridging gaps between customers, cross-functional teams, and executive leadership to deliver measurable business impact. Passionate about building customer-centric solutions and executing strategic initiatives that fuel company growth.
+                    As <strong>Head of PR and Strategic Partnerships</strong>, I design and execute comprehensive strategies that elevate brand visibility and foster meaningful audience engagement. I oversee <strong>influencer campaigns, traditional media, social media, and ambassador programs</strong> to create a cohesive and impactful brand presence. I manage <strong>event sponsorships, community events, and build strategic partnerships</strong> with organizations and companies to drive mutual growth and collaboration. I also lead <strong>financial education initiatives</strong> that empower communities. With a strong focus on storytelling, relationship-building, and strategic alliances, I am dedicated to creating lasting impact and value.
                 </p>
             </section>
 
-            <!-- Experience -->
+            <!-- Professional Experience -->
             <section class="section">
                 <h2 class="section-title">Professional Experience</h2>
 
+                <!-- MyBambu - Head of PR -->
                 <div class="experience-item">
                     <div class="job-header">
                         <div>
                             <div class="company">MyBambu</div>
-                            <div class="job-title">Customer Care Manager & Operations Support</div>
+                            <div class="job-title">Head of Public Relations & Strategic Partnerships</div>
+                            <div class="location">West Palm Beach, FL</div>
                         </div>
-                        <div class="date">2021 – Present</div>
+                        <div class="date">Apr 2022 – Present · 3+ years</div>
                     </div>
                     <ul class="achievements">
-                        <li>Led customer support operations for a rapidly growing FinTech platform, ensuring <strong>95%+ customer satisfaction</strong> and <strong>reducing average resolution time by 40%</strong></li>
-                        <li>Managed and trained a <strong>team of 10+ support specialists</strong>, implementing performance metrics and quality assurance protocols that elevated service standards</li>
-                        <li>Partnered with Marketing and Product teams to execute <strong>50+ campaigns</strong>, optimizing user communications and driving a <strong>30% increase in customer engagement</strong></li>
-                        <li>Collaborated with executive leadership to design and implement <strong>scalable internal processes</strong>, supporting new product launches and feature rollouts</li>
-                        <li>Acted as primary liaison between customers, internal stakeholders, and C-suite executives, translating customer insights into <strong>actionable product improvements</strong></li>
-                        <li>Built comprehensive training programs and SOPs that improved team onboarding efficiency by <strong>50%</strong></li>
-                        <li>Analyzed customer feedback and support data to identify trends, leading to <strong>15% reduction in repeat issues</strong></li>
+                        <li><strong>Architected comprehensive PR strategy</strong> that elevated brand visibility across traditional media, digital channels, and community platforms, positioning MyBambu as a leading FinTech brand in the Hispanic market</li>
+                        <li><strong>Led influencer marketing program</strong> managing 100+ partnerships that generated <strong>98M+ views</strong> and drove significant user acquisition and brand awareness</li>
+                        <li><strong>Directed social media strategy</strong> overseeing content creation, community management, and brand ambassador programs that increased follower base by <strong>200K+</strong> across platforms</li>
+                        <li><strong>Secured high-impact media placements</strong> in top-tier outlets including Univision, Telemundo, and Hispanic-focused publications, amplifying brand credibility</li>
+                        <li><strong>Orchestrated event sponsorships</strong> and community activations that strengthened brand presence and fostered authentic connections with target audiences</li>
+                        <li><strong>Built strategic partnerships</strong> with organizations, nonprofits, and corporations to expand market reach and create collaborative growth opportunities</li>
+                        <li><strong>Launched financial education initiatives</strong> empowering underserved communities with accessible banking knowledge and resources</li>
+                        <li><strong>Managed cross-functional teams</strong> coordinating marketing, content, and communications efforts to ensure cohesive brand storytelling</li>
                     </ul>
                 </div>
 
+                <!-- MyBambu - PR Specialist -->
                 <div class="experience-item">
                     <div class="job-header">
                         <div>
                             <div class="company">MyBambu</div>
-                            <div class="job-title">Marketing & Content Support</div>
+                            <div class="job-title">Public Relations Specialist & Content Creator</div>
+                            <div class="location">West Palm Beach, FL</div>
                         </div>
-                        <div class="date">2020 – 2021</div>
+                        <div class="date">Nov 2021 – Apr 2022</div>
                     </div>
                     <ul class="achievements">
-                        <li>Supported content creation and social media strategy, contributing to <strong>100K+ follower growth</strong> across platforms</li>
-                        <li>Led community engagement initiatives and content localization for Hispanic audiences, ensuring culturally relevant messaging</li>
-                        <li>Coordinated cross-channel marketing campaigns, analyzing engagement metrics to optimize messaging and improve <strong>click-through rates by 25%</strong></li>
-                        <li>Collaborated with design and marketing teams to produce bilingual content that resonated with target demographics</li>
-                        <li>Managed social media calendars and executed real-time engagement strategies during product launches</li>
+                        <li><strong>Developed strategic content</strong> for digital campaigns, social media, and PR initiatives that resonated with bilingual Hispanic audiences</li>
+                        <li><strong>Executed media relations campaigns</strong> securing press coverage and building relationships with key journalists and media outlets</li>
+                        <li><strong>Managed digital communications</strong> including email campaigns, social media content, and community engagement strategies</li>
+                        <li><strong>Collaborated with marketing team</strong> to align PR messaging with broader brand campaigns and product launches</li>
+                    </ul>
+                </div>
+
+                <!-- Festiva Radio -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Festiva Radio</div>
+                            <div class="job-title">Marketing Specialist</div>
+                            <div class="location">West Palm Beach, FL</div>
+                        </div>
+                        <div class="date">Aug 2019 – Jun 2022 · 3 years</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Spearheaded digital marketing strategy</strong> for Hispanic radio station, managing content creation, social media, and audience engagement initiatives</li>
+                        <li><strong>Designed and executed promotional campaigns</strong> for events, concerts, and brand partnerships that increased listener engagement</li>
+                        <li><strong>Coordinated influencer collaborations</strong> and brand activations that expanded reach within South Florida's Hispanic community</li>
+                        <li><strong>Produced multimedia content</strong> including video, graphics, and written materials for cross-platform distribution</li>
+                    </ul>
+                </div>
+
+                <!-- Apricot Lane Boutique -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Apricot Lane Boutique</div>
+                            <div class="job-title">Digital Marketing Specialist</div>
+                            <div class="location">Delray Beach, FL</div>
+                        </div>
+                        <div class="date">Oct 2020 – Nov 2021 · 1 year</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Managed social media presence</strong> creating visually compelling content that drove engagement and in-store traffic</li>
+                        <li><strong>Executed paid advertising campaigns</strong> on Facebook and Instagram optimizing for ROI and customer acquisition</li>
+                        <li><strong>Developed brand identity</strong> through cohesive visual storytelling and consistent messaging across digital touchpoints</li>
+                    </ul>
+                </div>
+
+                <!-- Hola Palm Beach TV -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Hola Palm Beach TV</div>
+                            <div class="job-title">News Producer & On-Air Presenter</div>
+                            <div class="location">West Palm Beach, FL</div>
+                        </div>
+                        <div class="date">Oct 2018 – Aug 2019</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Produced and presented news segments</strong> for bilingual television audience, covering community events and local stories</li>
+                        <li><strong>Directed audiovisual content production</strong> from concept to final delivery, ensuring high production standards</li>
+                        <li><strong>Conducted interviews</strong> with community leaders, business owners, and public figures</li>
+                    </ul>
+                </div>
+
+                <!-- Revista AutoIn -->
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Revista AutoIn</div>
+                            <div class="job-title">Correspondent & Journalist</div>
+                            <div class="location">Quito, Ecuador</div>
+                        </div>
+                        <div class="date">Jun 2014 – Oct 2019 · 5 years</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Produced feature articles and investigative reports</strong> covering automotive industry trends and consumer insights</li>
+                        <li><strong>Conducted interviews</strong> and press coverage for major automotive events and product launches</li>
+                        <li><strong>Built strong media relationships</strong> with industry stakeholders and communications teams</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Skills -->
+            <!-- Core Competencies -->
             <section class="section">
                 <h2 class="section-title">Core Competencies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="skill-category-title">Leadership & Management</div>
-                        <div class="skill-list">
-                            • Team Leadership & Training<br>
-                            • Performance Management<br>
-                            • Cross-Functional Collaboration<br>
-                            • Strategic Planning
+                <div class="skills-section">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-category-title">Public Relations & Media</div>
+                            <div class="skill-list">
+                                • Media Relations<br>
+                                • Press Release Strategy<br>
+                                • Crisis Communications<br>
+                                • Spokesperson Training<br>
+                                • Brand Positioning
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title">Operations & CX</div>
-                        <div class="skill-list">
-                            • Customer Experience Strategy<br>
-                            • Process Optimization<br>
-                            • Quality Assurance<br>
-                            • Data-Driven Decision Making
+                        <div class="skill-category">
+                            <div class="skill-category-title">Strategic Partnerships</div>
+                            <div class="skill-list">
+                                • Partnership Development<br>
+                                • Event Sponsorships<br>
+                                • Community Engagement<br>
+                                • Co-Branding Initiatives<br>
+                                • Stakeholder Relations
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title">Marketing & Communications</div>
-                        <div class="skill-list">
-                            • Content Strategy<br>
-                            • Campaign Management<br>
-                            • Social Media Coordination<br>
-                            • Bilingual Communications
+                        <div class="skill-category">
+                            <div class="skill-category-title">Marketing & Social Media</div>
+                            <div class="skill-list">
+                                • Influencer Marketing<br>
+                                • Social Media Strategy<br>
+                                • Content Creation<br>
+                                • Campaign Management<br>
+                                • Brand Storytelling
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title">Technical & Tools</div>
-                        <div class="skill-list">
-                            • Project Management<br>
-                            • CRM Systems (Zendesk, Salesforce)<br>
-                            • Analytics & Reporting<br>
-                            • Agile Methodologies
+                        <div class="skill-category">
+                            <div class="skill-category-title">Leadership & Strategy</div>
+                            <div class="skill-list">
+                                • Cross-Functional Leadership<br>
+                                • Strategic Planning<br>
+                                • Budget Management<br>
+                                • Team Collaboration<br>
+                                • Performance Analytics
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -383,17 +613,37 @@
             <!-- Education -->
             <section class="section">
                 <h2 class="section-title">Education</h2>
+
                 <div class="education-item">
                     <div class="job-header">
                         <div>
-                            <div class="job-title">Bachelor of Business Administration</div>
-                            <div class="company">University Name</div>
+                            <div class="degree">Master's Degree in Strategic Planning in Advertising & Public Relations</div>
+                            <div class="university">Universitat Autònoma de Barcelona</div>
+                            <div class="location">Barcelona, Spain</div>
                         </div>
-                        <div class="date">Year</div>
+                        <div class="date">2019 – 2020</div>
                     </div>
-                    <ul class="achievements">
-                        <li>Focus: Marketing & Business Management</li>
-                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="degree">Bachelor's Degree in Social Communication</div>
+                            <div class="university">Pontificia Universidad Católica del Ecuador</div>
+                            <div class="location">Quito, Ecuador</div>
+                        </div>
+                        <div class="date">2011 – 2015</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications">
+                    <div class="cert-badge">Salesforce Trailhead Certified</div>
+                    <div class="cert-badge">Strategic Communications</div>
+                    <div class="cert-badge">Digital Marketing</div>
                 </div>
             </section>
 
@@ -401,20 +651,9 @@
             <section class="section">
                 <h2 class="section-title">Languages</h2>
                 <div class="languages">
-                    <div class="language-item">🇺🇸 English – Native/Fluent</div>
-                    <div class="language-item">🇪🇸 Spanish – Native/Fluent</div>
+                    <div class="language-item">🇺🇸 English – Native / Fluent</div>
+                    <div class="language-item">🇪🇸 Spanish – Native / Fluent</div>
                 </div>
-            </section>
-
-            <!-- Additional Info -->
-            <section class="section">
-                <h2 class="section-title">Additional Strengths</h2>
-                <ul class="achievements">
-                    <li><strong>Startup Adaptability:</strong> Thrives in fast-paced, high-growth environments with evolving priorities</li>
-                    <li><strong>Problem-Solving:</strong> Proven ability to identify root causes and implement creative, scalable solutions</li>
-                    <li><strong>Customer Advocacy:</strong> Passionate about building customer-first cultures and translating feedback into business value</li>
-                    <li><strong>Cultural Competency:</strong> Deep understanding of Hispanic markets and bilingual customer needs</li>
-                </ul>
             </section>
         </div>
     </div>
@@ -422,13 +661,13 @@
     <button class="print-button" onclick="window.print()">📄 Download PDF</button>
 
     <script>
-        // Add smooth animations on load
+        // Smooth animations on page load
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section');
             sections.forEach((section, index) => {
                 section.style.opacity = '0';
                 section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
 
                 setTimeout(() => {
                     section.style.opacity = '1';
