@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Hernandez - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: -1px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            position: relative;
+            z-index: 1;
+            font-size: 0.95em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 50px 60px;
+        }
+
+        .section {
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 35px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .company {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.95em;
+            color: #718096;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .achievements li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category-title {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .skill-list {
+            font-size: 0.95em;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102,126,234,0.5);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .print-button {
+                display: none;
+            }
+            .header {
+                padding: 30px 40px;
+            }
+            .content {
+                padding: 30px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header, .content {
+                padding: 30px 25px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .print-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Paula Hernandez</h1>
+            <p class="title">Customer Care Manager | Operations & Marketing Leader</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span> <span>paula.hernandez@email.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span> <span>(555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span> <span>Miami, FL</span>
+                </div>
+                <div class="contact-item">
+                    <span>💼</span> <span>linkedin.com/in/paulahernandez</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Professional Summary -->
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Results-driven bilingual professional with proven expertise in <strong>Customer Operations, Marketing, and Team Leadership</strong>. Track record of leading high-performing teams, optimizing customer experience strategies, and driving operational excellence in fast-paced startup environments. Known for bridging gaps between customers, cross-functional teams, and executive leadership to deliver measurable business impact. Passionate about building customer-centric solutions and executing strategic initiatives that fuel company growth.
+                </p>
+            </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">MyBambu</div>
+                            <div class="job-title">Customer Care Manager & Operations Support</div>
+                        </div>
+                        <div class="date">2021 – Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Led customer support operations for a rapidly growing FinTech platform, ensuring <strong>95%+ customer satisfaction</strong> and <strong>reducing average resolution time by 40%</strong></li>
+                        <li>Managed and trained a <strong>team of 10+ support specialists</strong>, implementing performance metrics and quality assurance protocols that elevated service standards</li>
+                        <li>Partnered with Marketing and Product teams to execute <strong>50+ campaigns</strong>, optimizing user communications and driving a <strong>30% increase in customer engagement</strong></li>
+                        <li>Collaborated with executive leadership to design and implement <strong>scalable internal processes</strong>, supporting new product launches and feature rollouts</li>
+                        <li>Acted as primary liaison between customers, internal stakeholders, and C-suite executives, translating customer insights into <strong>actionable product improvements</strong></li>
+                        <li>Built comprehensive training programs and SOPs that improved team onboarding efficiency by <strong>50%</strong></li>
+                        <li>Analyzed customer feedback and support data to identify trends, leading to <strong>15% reduction in repeat issues</strong></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">MyBambu</div>
+                            <div class="job-title">Marketing & Content Support</div>
+                        </div>
+                        <div class="date">2020 – 2021</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Supported content creation and social media strategy, contributing to <strong>100K+ follower growth</strong> across platforms</li>
+                        <li>Led community engagement initiatives and content localization for Hispanic audiences, ensuring culturally relevant messaging</li>
+                        <li>Coordinated cross-channel marketing campaigns, analyzing engagement metrics to optimize messaging and improve <strong>click-through rates by 25%</strong></li>
+                        <li>Collaborated with design and marketing teams to produce bilingual content that resonated with target demographics</li>
+                        <li>Managed social media calendars and executed real-time engagement strategies during product launches</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Leadership & Management</div>
+                        <div class="skill-list">
+                            • Team Leadership & Training<br>
+                            • Performance Management<br>
+                            • Cross-Functional Collaboration<br>
+                            • Strategic Planning
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Operations & CX</div>
+                        <div class="skill-list">
+                            • Customer Experience Strategy<br>
+                            • Process Optimization<br>
+                            • Quality Assurance<br>
+                            • Data-Driven Decision Making
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Marketing & Communications</div>
+                        <div class="skill-list">
+                            • Content Strategy<br>
+                            • Campaign Management<br>
+                            • Social Media Coordination<br>
+                            • Bilingual Communications
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Technical & Tools</div>
+                        <div class="skill-list">
+                            • Project Management<br>
+                            • CRM Systems (Zendesk, Salesforce)<br>
+                            • Analytics & Reporting<br>
+                            • Agile Methodologies
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Bachelor of Business Administration</div>
+                            <div class="company">University Name</div>
+                        </div>
+                        <div class="date">Year</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Focus: Marketing & Business Management</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item">🇺🇸 English – Native/Fluent</div>
+                    <div class="language-item">🇪🇸 Spanish – Native/Fluent</div>
+                </div>
+            </section>
+
+            <!-- Additional Info -->
+            <section class="section">
+                <h2 class="section-title">Additional Strengths</h2>
+                <ul class="achievements">
+                    <li><strong>Startup Adaptability:</strong> Thrives in fast-paced, high-growth environments with evolving priorities</li>
+                    <li><strong>Problem-Solving:</strong> Proven ability to identify root causes and implement creative, scalable solutions</li>
+                    <li><strong>Customer Advocacy:</strong> Passionate about building customer-first cultures and translating feedback into business value</li>
+                    <li><strong>Cultural Competency:</strong> Deep understanding of Hispanic markets and bilingual customer needs</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <button class="print-button" onclick="window.print()">📄 Download PDF</button>
+
+    <script>
+        // Add smooth animations on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
