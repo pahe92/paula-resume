@@ -1,14 +1,15 @@
 # Paula Hernandez - Professional Resume
 
-A modern, dynamic, and interactive resume showcasing professional experience in Customer Operations, Marketing, and Team Leadership.
+A modern, dynamic, and interactive resume showcasing professional experience as Head of Marketing Strategy & Strategic Partnerships.
 
 ## 🎯 About
 
 This resume highlights Paula Hernandez's proven expertise in:
-- Customer Care Management & Operations
-- Marketing & Content Strategy
-- Team Leadership & Training
-- Cross-Functional Collaboration
+- Public Relations & Communications Leadership
+- Marketing Strategy & Brand Positioning
+- Influencer Marketing & Partnerships
+- National Media Campaigns
+- Multicultural Audience Engagement
 - Bilingual Communications (English/Spanish)
 
 ## ✨ Features
@@ -34,11 +35,13 @@ This resume highlights Paula Hernandez's proven expertise in:
 
 ## 💼 Key Highlights
 
-- Led customer support operations with **95%+ satisfaction rates**
-- Reduced resolution time by **40%**
-- Managed and trained teams of **10+ specialists**
-- Drove **30% increase in customer engagement**
-- Supported **100K+ social media follower growth**
+- Built PR department from scratch for leading Hispanic FinTech
+- Generated **100M+ views** and **4.49M engagements** through influencer marketing
+- Managed **200+ influencer partnerships** across Instagram, TikTok, YouTube, Facebook
+- Executed campaigns across **60+ U.S. cities** reaching multicultural audiences
+- Contributed to **30-40% of new account sign-ups** through comprehensive PR efforts
+- Grew social media presence by **300K+ followers** across all platforms
+- Secured placements in Univision, Telemundo, **Forbes Colombia**, and major publications
 
 ## 🎨 Design Elements
 
